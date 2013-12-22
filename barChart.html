@@ -83,43 +83,9 @@ label {
 
 <script>
 
-var data = [{"total": 29412.0 , "number": 32.0 , "district": " Puducherry " } ,
-{"total": 248621.0 , "number": 210.0 , "district": " Madhya Pradesh " } ,
-{"total": 5200.0 , "number": 2.0 , "district": " Mizoram " } ,
-{"total": 1800.0 , "number": 4.0 , "district": " Arunachal Pradesh " } ,
-{"total": 246849.0 , "number": 229.0 , "district": " Bihar " } ,
-{"total": 5100.0 , "number": 3.0 , "district": " Nagaland " } ,
-{"total": 77346.0 , "number": 69.0 , "district": " Jharkhand " } ,
-{"total": 160401.0 , "number": 40.0 , "district": " Punjab " } ,
-{"total": 96883.0 , "number": 111.0 , "district": " Chhattisgarh " } ,
-{"total": 121595.0 , "number": 137.0 , "district": " Kerala " } ,
-{"total": 487103.0 , "number": 371.0 , "district": " West Bengal " } ,
-{"total": 1879235.0 , "number": 901.0 , "district": " Uttar Pradesh " } ,
-{"total": 1299613.0 , "number": 784.0 , "district": " Tamil Nadu " } ,
-{"total": 270068.0 , "number": 228.0 , "district": " Chandigarh " } ,
-{"total": 1871907.0 , "number": 1185.0 , "district": " Haryana " } ,
-{"total": 89160.0 , "number": 50.0 , "district": " Goa " } ,
-{"total": 3050.0 , "number": 3.0 , "district": " Andaman & Nicobar Islands " } ,
-{"total": 468858.0 , "number": 267.0 , "district": " Gujarat " }, 
-{"total": 2951.0 , "number": 11.0 , "district": " Tripura " } ,
-{"total": 4488508.0 , "number": 1462.0 , "district": " Maharashtra " } ,
-{"total": 6500.0 , "number": 3.0 , "district": " Sikkim " } ,
-{"total": 5360.0 , "number": 12.0 , "district": " Meghalaya " } ,
-{"total": 197352.0 , "number": 111.0 , "district": " Uttarakhand " } ,
-{"total": 2414141.0 , "number": 197.0 , "district": " New Delhi " } ,
-{"total": 1366125.0 , "number": 1016.0 , "district": " Andhra Pradesh " } ,
-{"total": 6492805.0 , "number": 4059.0 , "district": " Karnataka " } ,
-{"total": 40977.0 , "number": 35.0 , "district": " Himachal Pradesh " } ,
-{"total": 39396.0 , "number": 64.0 , "district": " Assam " } ,
-{"total": 22702.0 , "number": 33.0 , "district": " Jammu & Kashmir " } ,
-{"total": 101.0 , "number": 1.0 , "district": " Daman And Diu " } ,
-{"total": 2005.0 , "number": 2.0 , "district": " Manipur " } ,
-{"total": 431587.0 , "number": 373.0 , "district": " Rajasthan " } ,
-{"total": 6013.0 , "number": 9.0 , "district": " Dadra & Nagar Haveli " } ,
-{"total": 632238.0 , "number": 35.0 , "district": " Orissa " } ];
 
 var margin = {top: 30, right: 20, bottom: 70, left: 100},
-    width = 1600 - margin.left - margin.right,
+    width = 1200 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 //var formatPercent = d3.format(".0%");
@@ -180,19 +146,6 @@ d3.json("districtData.json", function(error, data) {
       .style("text-anchor", "end")
       .text("Total Amount");
 
-/*  svg.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
-    .call(xAxis)
-    .selectAll(".tick text")  
-        //.style("text-anchor", "end")
-		.call(wrap, x.rangeBand());
-/*		.attr("dx", "-0.5em")
-        .attr("dy", "-.71em")
-        .attr("transform", function(d) {
-            return "rotate(-90)" 
-            });
-*/			
 
 svg.append("g")
       .attr("class", "x axis")
