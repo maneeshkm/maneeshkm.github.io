@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "SEM_SEO-samepledata1.csv",
+    "datarange": "12weeks",
+    "gradient": 0.02,
+    "yintercept": 2004.45,
+    "maxSEM": 3000,
+    "maxSEMimpact": 1000,
+    "medianSEM": 1250,
+    "medianSEMimpact": 2200,
+    "r": 0.924,
+    "rsquared": 0.855
+  },
+  {
+    "filename": "SEM_SEO-samepledata2.csv",
+    "datarange": "26weeks",
+    "gradient": 0.01,
+    "yintercept": 1004.45,
+    "maxSEM": 2000,
+    "maxSEMimpact": 500,
+    "medianSEM": 250,
+    "medianSEMimpact": 200,
+    "r": 0.621,
+    "rsquared": 0.752
+  },
+]

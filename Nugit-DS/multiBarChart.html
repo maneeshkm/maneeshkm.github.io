@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./bower_components/nvd3/src/nv.d3.css" rel="stylesheet" />
+        <script src="./bower_components/d3/d3.min.js"></script>
+        <script src="./bower_components/nvd3/nv.d3.min.js"></script>
+    </head>
+    <body>
+        
+    <div id="scatterchart"><svg style="width:800px;height:400px;"></svg></div>
+
+
+    <script>
+
+
+
+        data_scatterchart=[{"values": [{"y": 38902, "x": 0}, {"y": 33085, "x": 1}, {"y": 33885, "x": 2}, {"y": 30337, "x": 3}, {"y": 27802, "x": 4}, {"y": 30444, "x": 5}, {"y": 33805, "x": 6}, {"y": 37674, "x": 7}, {"y": 31778, "x": 8}, {"y": 4032, "x": 9}, {"y": 7864, "x": 10}, {"y": 49254, "x": 11}, {"y": 49147, "x": 12}, {"y": 23123, "x": 13}, {"y": 28629, "x": 14}, {"y": 18322, "x": 15}, {"y": 34926, "x": 16}, {"y": 40849, "x": 17}, {"y": 12330, "x": 18}, {"y": 37541, "x": 19}, {"y": 35460, "x": 20}, {"y": 0, "x": 21}, {"y": 0, "x": 22}, {"y": 14503, "x": 23}, {"y": 29012, "x": 24}, {"y": 25003, "x": 25}, {"y": 28004, "x": 26}, {"y": 15433, "x": 27}, {"y": 39755, "x": 28}, {"y": 44211, "x": 29}, {"y": 43011, "x": 30}, {"y": 45465, "x": 31}, {"y": 104, "x": 32}, {"y": 1064, "x": 33}, {"y": 35807, "x": 34}, {"y": 37541, "x": 35}, {"y": 22003, "x": 36}, {"y": 42023, "x": 37}], "key": "SEM", "yAxis": "1"}, {"color": "red", "values": [{"y": 76122, "x": 0}, {"y": 75509, "x": 1}, {"y": 70332, "x": 2}, {"y": 71266, "x": 3}, {"y": 58833, "x": 4}, {"y": 61981, "x": 5}, {"y": 66677, "x": 6}, {"y": 69025, "x": 7}, {"y": 75349, "x": 8}, {"y": 98332, "x": 9}, {"y": 102123, "x": 10}, {"y": 65450, "x": 11}, {"y": 69292, "x": 12}, {"y": 82001, "x": 13}, {"y": 73267, "x": 14}, {"y": 92022, "x": 15}, {"y": 71480, "x": 16}, {"y": 73187, "x": 17}, {"y": 94023, "x": 18}, {"y": 73214, "x": 19}, {"y": 73774, "x": 20}, {"y": 112011, "x": 21}, {"y": 108442, "x": 22}, {"y": 86501, "x": 23}, {"y": 85941, "x": 24}, {"y": 89303, "x": 25}, {"y": 82259, "x": 26}, {"y": 102333, "x": 27}, {"y": 81699, "x": 28}, {"y": 80898, "x": 29}, {"y": 79778, "x": 30}, {"y": 82953, "x": 31}, {"y": 88032, "x": 32}, {"y": 103043, "x": 33}, {"y": 82659, "x": 34}, {"y": 87549, "x": 35}, {"y": 102033, "x": 36}, {"y": 81245, "x": 37}], "key": "SEO", "yAxis": "1"}];
+
+    nv.addGraph(function() {
+        var chart = nv.models.multiBarChart();
+
+        chart.margin({top: 30, right: 60, bottom: 20, left: 60});
+
+        var datum = data_scatterchart;
+
+
+
+            chart.xAxis
+                .tickFormat(d3.format(',.2f'));
+            chart.yAxis
+                .tickFormat(d3.format(',.2f'));
+
+                    chart.tooltipContent(function(key, y, e, graph) {
+                        var x = String(graph.point.x);
+                        var y = String(graph.point.y);
+                                            if(key == 'SEM'){
+                        var y =  String(graph.point.y)  + ' ';
+                    }
+                    if(key == 'SEO'){
+                        var y =  String(graph.point.y)  + ' ';
+                    }
+
+                        tooltip_str = '<center><b>'+key+'</b></center>' + y + ' at ' + x;
+                        return tooltip_str;
+                    });
+
+      chart.showLegend(true);
+
+
+
+        
+
+
+        d3.select('#scatterchart svg')
+            .datum(datum)
+            .transition().duration(500)
+            .attr('width', 800)
+            .attr('height', 400)
+            .call(chart);
+
+
+    });
+
+
+
+
+    </script>
+
+    </body>
+</html>

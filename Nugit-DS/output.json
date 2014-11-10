@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "data/sample_data_Oct.csv", 
+    "datarange": "26weeks", 
+    "gradient": -0.58, 
+    "yintercept": 102374.93, 
+    "maxSEM": 49254, 
+    "maxSEMimpact": 73939, 
+    "medianSEM": 32431, 
+    "medianSEMimpact": 83651, 
+    "r": -0.785, 
+    "rsquared": 0.616
+  }, 
+  {
+    "filename": "data/sample_data_Oct.csv", 
+    "datarange": "12weeks", 
+    "gradient": -0.38, 
+    "yintercept": 98533.63, 
+    "maxSEM": 49254, 
+    "maxSEMimpact": 79665, 
+    "medianSEM": 32431, 
+    "medianSEMimpact": 86110, 
+    "r": -0.761, 
+    "rsquared": 0.579
+  }
+]
